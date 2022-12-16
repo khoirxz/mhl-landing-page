@@ -94,7 +94,7 @@ const App = () => {
             </div>
           </div>
           <div className="p-4 text-center text-sm">
-            <p>&copy; 2022 Malang Hacker Link Team</p>
+            <p>&copy;2022 - Malang Hacker Link</p>
           </div>
         </div>
       </div>
