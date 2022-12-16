@@ -1,34 +1,98 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaGithub,
+  FaTelegram,
+} from "react-icons/fa";
+import { Hero, Section, Footer } from "./components";
+import { about } from "./asciiArt";
 
-function App() {
-  const [count, setCount] = useState(0)
+const data = [
+  {
+    id: 1,
+    icon: <FaFacebookF size={24} />,
+  },
+  {
+    id: 2,
+    icon: <FaInstagram size={24} />,
+  },
+  {
+    id: 3,
+    icon: <FaYoutube size={24} />,
+  },
+  {
+    id: 4,
+    icon: <FaGithub size={24} />,
+  },
+  {
+    id: 5,
+    icon: <FaTelegram size={24} />,
+  },
+];
 
+const App = () => {
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
-}
+    <div className="min-h-screen p-5 bg-stone-800 text-white font-display overflow-x-hidden relative">
+      <div className="bg-[#0D0D0D]">
+        <div className="max-w-screen-xl mx-auto">
+          <div className="flex flex-row">
+            <div className="px-10 pt-16 max-w-2xl w-full">
+              <Hero />
 
-export default App
+              <Section title="-about">
+                <pre className="text-sub-ascii-mobile md:text-sub-ascii mb-5">
+                  {about}
+                </pre>
+                <p className="my-3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Perferendis eum enim error ipsum earum repellendus. Autem
+                  magni ad sint! Voluptates corrupti aliquam quia provident
+                  culpa!
+                </p>
+                <p className="my-3">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Nulla, cum pariatur voluptate vitae non excepturi. Labore
+                  veniam voluptas adipisci consectetur placeat deleniti officiis
+                  reprehenderit voluptatum.
+                </p>
+                <p className="my-10">
+                  <span className="font-bold underline">Our mission</span> -
+                  Menjadikan Kota Malang maju dalam aspek bidang Cyber Security,
+                  baik dengan mengadakan Seminar, Gathering, maupun Workshop.
+                  Menerapkan Ethical Hacking dalam Penetration Testing sebuah
+                  sistem.
+                </p>
+                <p className="my-3">
+                  <span className="font-bold underline">Our vision</span> -
+                  Membangun talenta - talenta muda cyber security profesional,
+                  baik technical maupun non-technical.
+                </p>
+
+                <p>More information ? Follow us:</p>
+                <div className="flex flex-row gap-5 p-4">
+                  {data.map((item) => (
+                    <div key={item.id} className="cursor-pointer">
+                      {item.icon}
+                    </div>
+                  ))}
+                </div>
+
+                <p className="my-10">
+                  <span className="text-green-500">root@device-988:~$</span> |
+                </p>
+              </Section>
+
+              <Footer />
+            </div>
+          </div>
+          <div className="p-4 text-center text-sm">
+            <p>&copy; 2022 Malang Hacker Link Team</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default App;
