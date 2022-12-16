@@ -116,6 +116,7 @@ body {
   background: rgb(18, 18, 18);
 }
 
+/* blink cursor terminal */
 .blink-cursor {
   animation: 1s blink infinite;
 }
