@@ -115,3 +115,19 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(18, 18, 18);
 }
+
+.blink-cursor {
+  animation: 1s blink infinite;
+}
+
+@keyframes blink {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: inherit;
+  }
+  100% {
+    color: transparent;
+  }
+}

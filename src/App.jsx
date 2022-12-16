@@ -48,17 +48,11 @@ const App = () => {
                     {about}
                   </pre>
                   <p className="my-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Perferendis eum enim error ipsum earum repellendus. Autem
-                    magni ad sint! Voluptates corrupti aliquam quia provident
-                    culpa!
+                    Komunitas IT yang secara khusus membahas Hacking, Cyber
+                    Security, dan Programming. Sempat non-aktif dan berdiri
+                    kembali pada tahun 2016 yang bertempat di Kota Malang.
                   </p>
-                  <p className="my-3">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Nulla, cum pariatur voluptate vitae non excepturi. Labore
-                    veniam voluptas adipisci consectetur placeat deleniti
-                    officiis reprehenderit voluptatum.
-                  </p>
+
                   <p className="my-10">
                     <span className="font-bold underline">Our mission</span> -
                     Menjadikan Kota Malang maju dalam aspek bidang Cyber
@@ -85,7 +79,7 @@ const App = () => {
                     <span className="text-green-500">
                       root@malanghackerlink.org:~ #
                     </span>{" "}
-                    |
+                    <span className="blink-cursor">|</span>
                   </p>
                 </Section>
               ) : null}
