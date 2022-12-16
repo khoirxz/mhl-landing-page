@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -32,56 +33,59 @@ const data = [
 ];
 
 const App = () => {
+  const [showContent, setShowContent] = useState(false);
   return (
     <div className="min-h-screen p-5 bg-stone-800 text-white font-display overflow-x-hidden relative">
       <div className="bg-[#0D0D0D]">
         <div className="max-w-screen-xl mx-auto">
           <div className="flex flex-row">
             <div className="px-10 pt-16 max-w-2xl w-full">
-              <Hero />
+              <Hero showContent={showContent} setShowContent={setShowContent} />
 
-              <Section title="-about">
-                <pre className="text-sub-ascii-mobile md:text-sub-ascii mb-5">
-                  {about}
-                </pre>
-                <p className="my-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Perferendis eum enim error ipsum earum repellendus. Autem
-                  magni ad sint! Voluptates corrupti aliquam quia provident
-                  culpa!
-                </p>
-                <p className="my-3">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Nulla, cum pariatur voluptate vitae non excepturi. Labore
-                  veniam voluptas adipisci consectetur placeat deleniti officiis
-                  reprehenderit voluptatum.
-                </p>
-                <p className="my-10">
-                  <span className="font-bold underline">Our mission</span> -
-                  Menjadikan Kota Malang maju dalam aspek bidang Cyber Security,
-                  baik dengan mengadakan Seminar, Gathering, maupun Workshop.
-                  Menerapkan Ethical Hacking dalam Penetration Testing sebuah
-                  sistem.
-                </p>
-                <p className="my-3">
-                  <span className="font-bold underline">Our vision</span> -
-                  Membangun talenta - talenta muda cyber security profesional,
-                  baik technical maupun non-technical.
-                </p>
+              {showContent ? (
+                <Section title="-about">
+                  <pre className="text-sub-ascii-mobile md:text-sub-ascii mb-5">
+                    {about}
+                  </pre>
+                  <p className="my-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Perferendis eum enim error ipsum earum repellendus. Autem
+                    magni ad sint! Voluptates corrupti aliquam quia provident
+                    culpa!
+                  </p>
+                  <p className="my-3">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Nulla, cum pariatur voluptate vitae non excepturi. Labore
+                    veniam voluptas adipisci consectetur placeat deleniti
+                    officiis reprehenderit voluptatum.
+                  </p>
+                  <p className="my-10">
+                    <span className="font-bold underline">Our mission</span> -
+                    Menjadikan Kota Malang maju dalam aspek bidang Cyber
+                    Security, baik dengan mengadakan Seminar, Gathering, maupun
+                    Workshop. Menerapkan Ethical Hacking dalam Penetration
+                    Testing sebuah sistem.
+                  </p>
+                  <p className="my-3">
+                    <span className="font-bold underline">Our vision</span> -
+                    Membangun talenta - talenta muda cyber security profesional,
+                    baik technical maupun non-technical.
+                  </p>
 
-                <p>More information ? Follow us:</p>
-                <div className="flex flex-row gap-5 p-4">
-                  {data.map((item) => (
-                    <div key={item.id} className="cursor-pointer">
-                      {item.icon}
-                    </div>
-                  ))}
-                </div>
+                  <p>More information ? Follow us:</p>
+                  <div className="flex flex-row gap-5 p-4">
+                    {data.map((item) => (
+                      <div key={item.id} className="cursor-pointer">
+                        {item.icon}
+                      </div>
+                    ))}
+                  </div>
 
-                <p className="my-10">
-                  <span className="text-green-500">root@device-988:~$</span> |
-                </p>
-              </Section>
+                  <p className="my-10">
+                    <span className="text-green-500">root@device-988:~$</span> |
+                  </p>
+                </Section>
+              ) : null}
 
               <Footer />
             </div>
