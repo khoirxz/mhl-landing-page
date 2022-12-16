@@ -82,7 +82,10 @@ const App = () => {
                   </div>
 
                   <p className="my-10">
-                    <span className="text-green-500">root@device-988:~$</span> |
+                    <span className="text-green-500">
+                      root@malanghackerlink.org:~ #
+                    </span>{" "}
+                    |
                   </p>
                 </Section>
               ) : null}

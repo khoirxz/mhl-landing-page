@@ -37,7 +37,7 @@ const Hero = ({ showContent, setShowContent }) => {
     <header>
       <div className={showContent ? "mb-5" : "min-h-screen"}>
         <p>
-          <span className="text-green-500">root@device-988:~$</span>{" "}
+          <span className="text-green-500">root@malanghackerlink.org:~ #</span>{" "}
           <Typewriter
             onInit={(typewriter) => {
               typewriter
@@ -59,7 +59,10 @@ const Hero = ({ showContent, setShowContent }) => {
             <div className="w-full border-b-4 border-dashed border-white my-3"></div>
             <p className="mt-5">type "-help" for help</p>
             <p className="mt-8">
-              <span className="text-green-500 ">root@device-988:~$</span> mhl{" "}
+              <span className="text-green-500 ">
+                root@malanghackerlink.org:~ #
+              </span>{" "}
+              mhl{" "}
               <span
                 onClick={() => setShowContent((state) => !state)}
                 className="hover:bg-white hover:text-black font-bold cursor-pointer text-red-500"
